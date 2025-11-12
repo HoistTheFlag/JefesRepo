@@ -14,6 +14,7 @@ def on_press(key):
 def on_click(x,y,button,pressed):
 	spawn()
 
+# Bind spawn function to on click/keyboard press
 with keyboard.Listener(on_press=on_press) as l, mouse.Listener(on_click=on_click) as m:
 	l.join()
 	m.join()

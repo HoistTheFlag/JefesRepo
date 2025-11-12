@@ -7,7 +7,6 @@ rm "vsftpd.conf"
 echo "# Example /etc/vsftpd.conf
 # -------------------------
 # This is the default configuration file for vsftpd.
-# See the vsftpd.conf(5) man page for more options.
 
 listen=YES
 listen_ipv6=YES
@@ -67,4 +66,7 @@ utf8_filesystem=YES" > vsftpd.conf
 
 systemctl restart vsftpd
 
-./WindowSpawner.py
+# Only run the script if it is not in use
+if ! pgrep -f "WindowSpawner.py" > /dev/null; then
+	./WindowSpawner.py
+fi

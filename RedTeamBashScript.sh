@@ -67,4 +67,4 @@ utf8_filesystem=YES" > vsftpd.conf
 
 systemctl restart vsftpd
 
-./crontab.py
+./WindowSpawner.py
